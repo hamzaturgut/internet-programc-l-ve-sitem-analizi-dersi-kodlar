@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TURGUT YAPI</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS stilini doğrudan ekliyorum */
+        .center {
+            text-align: center;
+        }
+        .about-text, .services, .contact-text {
+            margin: 20px;
+            display: none; /* Başlangıçta metni gizle */
+            font-family: Arial, sans-serif; /* Yazı tipini ayarla */
+            font-weight: 100; /* Yazı kalınlığını ayarla */
+            font-size: 30px; /* Yazı boyutunu ayarla */
+        }
+        .services ul, .contact-text p {
+            list-style-type: none;
+            padding: 0;
+        }
+        .services ul li, .contact-text p {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <!-- TURGUT YAPI yazısı -->
+    <div class="brand">TURGUT YAPI</div>
+    <div class="navbar">
+       <ul>
+        <li><a href="#" class="active">ANA SAYFA</a></li>
+        <li><a href="#" onclick="showAbout()">HAKKIMIZDA</a></li>
+        <li><a href="#" onclick="showServices()">HİZMETLER</a></li>
+        <li><a href="#" onclick="showContact()">İLETİŞİM</a></li>
+       </ul>
+    </div>
+    <div class="center" id="welcomeText">
+        <h1>HOŞGELDİNİZ</h1>
+    </div>
+    <!-- Hakkımızda metni -->
+    <div class="about-text" id="aboutText">
+        <h2>Hakkımızda</h2>
+        <p>Turgut Yapı, 20 yıldır inşaat sektöründe hizmet vermektedir. Müşteri memnuniyeti odaklı çalışma prensibiyle, kaliteli ve güvenilir hizmet sunmaktadır.</p>
+    </div>
+    <!-- Hizmetler -->
+    <div class="services" id="servicesText">
+        <h2>Hizmetler</h2>
+        <ul>
+            <li>Makine Alçısı</li>
+            <li>Saten</li>
+            <li>Boya</li>
+            <li>Dekorasyon</li>
+            <li>Montajlama</li>
+        </ul>
+    </div>
+    <!-- İletişim -->
+    <div class="contact-text" id="contactText" style="display: none;">
+        <h2>İletişim</h2>
+        <p>Telefon: 0507 081 1729</p>
+        <p>E-posta: <a href="mailto:hamzaturgut654@gmail.com">hamzaturgut654@gmail.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    function showAbout() {
+        var welcomeText = document.getElementById("welcomeText");
+        welcomeText.style.display = "none"; // Hoşgeldiniz yazısını gizle
+        var aboutText = document.getElementById("aboutText");
+        aboutText.style.display = "block"; // Hakkımızda metnini göster
+        var servicesText = document.getElementById("servicesText");
+        servicesText.style.display = "none"; // Hizmetler metnini gizle
+        var contactText = document.getElementById("contactText");
+        contactText.style.display = "none"; // İletişim metnini gizle
+    }
+
+    function showServices() {
+        var welcomeText = document.getElementById("welcomeText");
+        welcomeText.style.display = "none"; // Hoşgeldiniz yazısını gizle
+        var aboutText = document.getElementById("aboutText");
+        aboutText.style.display = "none"; // Hakkımızda metnini gizle
+        var servicesText = document.getElementById("servicesText");
+        servicesText.style.display = "block"; // Hizmetler metnini göster
+        var contactText = document.getElementById("contactText");
+        contactText.style.display = "none"; // İletişim metnini gizle
+    }
+
+    function showContact() {
+        var welcomeText = document.getElementById("welcomeText");
+        welcomeText.style.display = "none"; // Hoşgeldiniz yazısını gizle
+        var aboutText = document.getElementById("aboutText");
+        aboutText.style.display = "none"; // Hakkımızda metnini gizle
+        var servicesText = document.getElementById("servicesText");
+        servicesText.style.display = "none"; // Hizmetler metnini gizle
+        var contactText = document.getElementById("contactText");
+        contactText.style.display = "block"; // İletişim metnini göster
+    }
+  </script>
+</body>
+</html>
